@@ -40,6 +40,7 @@ class KooziesController < ApplicationController
   # POST /koozies
   # POST /koozies.xml
   def create
+    params[:koozy][:style] = Style.find(params[:koozy][:style].to_i)
     @koozy = Koozy.new(params[:koozy])
 
     respond_to do |format|
