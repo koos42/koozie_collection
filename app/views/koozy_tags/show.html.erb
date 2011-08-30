@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Koozy:</b>
+  <%= @koozy_tag.koozy %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @koozy_tag.tag %>
+</p>
+
+
+<%= link_to 'Edit', edit_koozy_tag_path(@koozy_tag) %> |
+<%= link_to 'Back', koozy_tags_path %>

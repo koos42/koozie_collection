@@ -1,4 +1,6 @@
 KoozyCollection::Application.routes.draw do
+  resources :koozy_tags
+
   resources :koozies
 
   resources :styles

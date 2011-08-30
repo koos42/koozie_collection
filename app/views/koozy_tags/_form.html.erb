@@ -1,0 +1,25 @@
+<%= form_for(@koozy_tag) do |f| %>
+  <% if @koozy_tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@koozy_tag.errors.count, "error") %> prohibited this koozy_tag from being saved:</h2>
+
+      <ul>
+      <% @koozy_tag.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :koozy %><br />
+    <%= f.text_field :koozy %>
+  </div>
+  <div class="field">
+    <%= f.label :tag %><br />
+    <%= f.text_field :tag %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
