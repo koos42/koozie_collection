@@ -1,0 +1,27 @@
+<h1>Listing koozies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Style</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @koozies.each do |koozy| %>
+  <tr>
+    <td><%= koozy.name %></td>
+    <td><%= koozy.description %></td>
+    <td><%= koozy.style %></td>
+    <td><%= link_to 'Show', koozy %></td>
+    <td><%= link_to 'Edit', edit_koozy_path(koozy) %></td>
+    <td><%= link_to 'Destroy', koozy, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Koozy', new_koozy_path %>
