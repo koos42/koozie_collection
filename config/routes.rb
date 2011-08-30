@@ -1,4 +1,6 @@
 KoozyCollection::Application.routes.draw do
+  resources :styles
+
   resources :tags
 
   # The priority is based upon order of creation:

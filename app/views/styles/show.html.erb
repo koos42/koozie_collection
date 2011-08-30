@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @style.name %>
+</p>
+
+<p>
+  <b>Volume oz:</b>
+  <%= @style.volume_oz %>
+</p>
+
+
+<%= link_to 'Edit', edit_style_path(@style) %> |
+<%= link_to 'Back', styles_path %>
